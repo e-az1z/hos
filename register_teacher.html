@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MAHORAT IT ACADEMY</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="./img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- slider link -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="d-flex align-items-center px-4 px-lg-5">
+            <img src="./img/logo.png" width="50px">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto px-5 p-0">
+                <a href="index.html" class="nav-item nav-link active">Bosh Sahifa</a>
+                <a href="about.html" class="nav-item nav-link">Markaz haqida</a>
+                <a href="news.html" class="nav-item nav-link">Yangiliklar</a>
+                <a href="courses.html" class="nav-item nav-link">Kurslar</a>
+                <a href="contact.html" class="nav-item nav-link">Bog'lanish</a>
+            </div>
+            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-block">Kursga Yozilish<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="container">
+        <div class="table-responsive position-relative">
+            <div class="btn-groups mt-5 position-absolute end-0 float-end">
+                <div class="btn-group mt-3 mb-5">
+                    <button class="btn bg-success rounded-3 text-white">o'zgartirish</button>
+                    <button class="btn bg-danger d-flex align-items-center mx-2 rounded-3 text-white ml-3"
+                        style="margin-left: 10px;" onclick="tech_FN('del')" >o'chirish <i
+                            class="fa-solid fa-trash" onclick="tech_FN('del')"></i></button>
+                </div>
+            </div>
+            <table class="table table-bordered table-striped border-light text-center caption-top table-hover ">
+                <caption class="text-bg mt-4 mb-5 text-center h4">Registratsiya bo'lgan o'qtuvchilar</caption>
+                <!-- <tr>
+                    <button class="">o'zgartirish</button>
+                    <button class="">o'chirish</button> 
+                </tr> -->
+                <thead>
+                    <!-- <colgroup>
+                        <col span="1" class="bg-secondary">
+                        <col span="1" class="bg-primary">
+                        <col span="1" class="bg-info">
+                        <col span="1" class="bg-warning">
+                        <col span="1" class="bg-secondary">
+                        <col span="1" class="bg-danger">
+                        <col span="1" class="bg-light">
+                        <col span="1" class="bg-success">
+                        <col span="1" class="text-bg-info">
+                        
+                    </colgroup> -->
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">ISM</th>
+                        <th scope="col">FAMILIYA</th>
+                        <th>FAN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Aziz</td>
+                        <td>Ergashev</td>
+                        <td class="d-flex text-center justify-content-center align-items-center mr-2">Dasturlash <i class="fa-solid fa-minus position-absolute text-danger end-0 px-3" id="delete_icon" style="cursor: pointer;"></i></td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Abbos</td>
+                        <td>Sanaqulov</td>
+                        <td class="d-flex text-center justify-content-center align-items-center mr-2">English <i class="fa-solid fa-minus position-absolute text-danger end-0 px-3" id="delete_icon" style="cursor: pointer;"></i></td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Shoxjahon</td>
+                        <td>Akbarzoda</td>
+                        <td class="d-flex text-center justify-content-center align-items-center mr-2">Matematika <i class="fa-solid fa-minus position-absolute text-danger end-0 px-3" id="delete_icon" style="cursor: pointer;"></i></td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td>Aziz</td>
+                        <td>Ergashev</td>
+                        <td class="d-flex text-center justify-content-center align-items-center mr-2">Grafik Dizayn <i class="fa-solid fa-minus position-absolute text-danger end-0 px-3" id="delete_icon" style="cursor: pointer;"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered table-striped border-light text-center caption-top table-hover ">
+                <caption class="text-bg mt-4 mb-3 text-center h4">Login Berilgan Lekin registratsiya bo'lmagan
+                    o'qtuvchilar</caption>
+                <thead>
+                    <!-- <colgroup>
+                        <col span="1" class="bg-secondary">
+                        <col span="1" class="bg-primary">
+                        <col span="1" class="bg-info">
+                        <col span="1" class="bg-warning">
+                        <col span="1" class="bg-secondary">
+                        <col span="1" class="bg-danger">
+                        <col span="1" class="bg-light">
+                        <col span="1" class="bg-success">
+                        <col span="1" class="text-bg-info">
+    
+                    </colgroup> -->
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">ISM</th>
+                        <th scope="col">FAMILIYA</th>
+                        <th>FAN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Aziz</td>
+                        <td>Ergashev</td>
+                        <td class="d-flex text-center justify-content-center align-items-center mr-2">Dasturlash <i class="fa-solid fa-minus position-absolute text-danger end-0 px-3" id="delete_icon" style="cursor: pointer;"></i></td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Abbos</td>
+                        <td>Sanaqulov</td>
+                        <td class="d-flex text-center justify-content-center align-items-center mr-2">English <i class="fa-solid fa-minus position-absolute text-danger end-0 px-3" id="delete_icon" style="cursor: pointer;"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
